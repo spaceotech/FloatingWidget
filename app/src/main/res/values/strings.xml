@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FloatingWidget</string>
+    <string name="lbl_setup_floating_widget">Setup Floating Widget</string>
+    <string name="lbl_floating_widget_contols_here">Floating Widget contols here</string>
+    <string name="msg_draw_over_other_app_permission_not_enabled">Draw over other app permission not enabled.</string>
 </resources>

@@ -30,7 +30,7 @@
                 android:id="@+id/close_btn"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:src="@drawable/error"
                 tools:ignore="ContentDescription" />
         </RelativeLayout>
@@ -57,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:padding="5dp"
-                android:text="Floating Widget contols here"
+                android:text="@string/lbl_floating_widget_contols_here"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="bold" />

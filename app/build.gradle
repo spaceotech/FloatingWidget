@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    namespace 'com.floatingwidget'
+    compileSdk 34
     defaultConfig {
         applicationId "com.floatingwidget"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdk 21
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,11 +20,17 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+
+    // Espresso for UI testing
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.6.0') {
+        exclude group: 'androidx.annotation', module: 'annotation'
+    }
+
+    // JUnit for unit testing
+    testImplementation 'junit:junit:4.13.2'
 }
